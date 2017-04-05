@@ -15,7 +15,7 @@ export class SearchService {
   constructor(private http: Http) { }
 
   getArticles(query){
-    return this.http.get(this.url + '/svc/search/v2/articlesearch.json?q='+ query +'&amp;api-key=' + this.token)
+    return this.http.get(this.url + '/svc/search/v2/articlesearch.json?q='+ query +'&api-key=' + this.token)
       .map(res => res.json());
   }
 }
